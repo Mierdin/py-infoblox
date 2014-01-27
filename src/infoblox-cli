@@ -65,7 +65,7 @@ Options:
 
     args = docopt(usage, version='0.1.0')
 
-    ib = Infoblox(args['--config'])
+    ib = Infoblox(args['--file'])
 
     if args['get']:
         result = ib.get_object(args['--type'], args['--data'])
