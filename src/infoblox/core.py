@@ -142,13 +142,12 @@ class Infoblox(object):
 
         return r.content
 
-    def remove_object(self, ref, payload):
+    def remove_object(self, ref):
         """
         Remove an Infoblox object
 
         Args:
             ref      (str): Object reference
-            payload (dict): Payload with data to send
 
         Returns:
             The object reference of the removed object
@@ -157,7 +156,7 @@ class Infoblox(object):
             InfobloxException
 
         """
-        r = self.session.delete(self.wapi + ref, data=payload)
+        r = self.session.delete(self.wapi + ref)
 
         if r.status_code != requests.codes.ok:
             raise InfobloxException, "Cannot remove '%s' object: %s [code %d]" % (
