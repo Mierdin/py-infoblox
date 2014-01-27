@@ -72,9 +72,9 @@ Options:
     elif args['create']:
         result = ib.create_object(args['--type'], args['--data'])
     elif args['update']:
-        result = ib.update_object(args['--objref'], args['--data'])
+        result = ib.update_object(args['--ref'], args['--data'])
     elif args['remove']:
-        result = ib.remove_object(args['--objref'])
+        result = ib.remove_object(args['--ref'])
 
     print result
         
