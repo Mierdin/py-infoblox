@@ -65,7 +65,7 @@ class Infoblox(object):
             self.wapi      = parser.get('Default', 'wapi')
             self.username  = parser.get('Default', 'username')
             self.password  = parser.get('Default', 'password')
-            self.sslverify = parser.get('Default', 'sslverify')
+            self.sslverify = parser.getboolean('Default', 'sslverify')
         except ConfigParser.NoOptionError as e:
             raise InfobloxException, 'Configuration issues detected in %s: %s' % (self.config, e)
         
