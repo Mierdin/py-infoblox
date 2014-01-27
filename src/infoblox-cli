@@ -33,7 +33,7 @@ removing of objects from an Infoblox server instance.
 """
 
 from docopt import docopt
-from infoblox import Infoblox
+from infoblox.core import Infoblox
 
 def main():
     
