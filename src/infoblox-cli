@@ -68,7 +68,7 @@ Options:
     import os.path
     if os.path.isfile(args['--file']):
       ib = Infoblox(args['--file'])
-    else
+    else:
       print "Error importing conf file"
 
     if args['get']:
