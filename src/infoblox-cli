@@ -65,7 +65,11 @@ Options:
 
     args = docopt(usage, version='0.1.0')
 
-    ib = Infoblox(args['--file'])
+    import os.path
+    if os.path.isfile(args['--file']):
+      ib = Infoblox(args['--file'])
+    else
+      print "Error importing conf file"
 
     if args['get']:
         result = ib.get_object(args['--type'], args['--data'])
